@@ -255,7 +255,7 @@ body {
     transition: var(--transition);
 }
 
-.product-card:hover .product-image img {
+.product-card:hover .product-image <img src "triciclo.jpg" 
     transform: scale(1.1);
 }
 
