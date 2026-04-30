@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubaFried's Envíos - Energía Portátil y Paneles Solares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="8" fill="#00D9FF"/>
+                        <path d="M10 20L15 25L30 10" stroke="#0d0d0d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>CubaFried's Envíos</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#productos">Productos</a>
+                    <a href="#envios">Envíos a Cuba</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <button class="cta-button header-btn" onclick="openPaymentModal()">Hacer Pedido</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Energía portátil y paneles solares con envíos directos a Cuba</h1>
+                <p class="hero-subtitle">Rápido, seguro y al mejor precio</p>
+                <button class="cta-button hero-btn" onclick="scrollToProducts()">Ver productos</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1617547696485-467be63903b3?w=600&h=600&fit=crop" alt="EcoFlow Solar Energy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRODUCTOS ==================== -->
+    <section class="products" id="productos">
+        <div class="container">
+            <h2>Catálogo de Productos</h2>
+            <div class="products-grid">
+                <!-- EcoFlow River 2 -->
+                <div class="product-card" onclick="openProductDetails(1)">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602d4d?w=300&h=300&fit=crop" alt="EcoFlow River 2">
+                    </div>
+                    <h3>EcoFlow River 2</h3>
+                    <p class="product-price">$599</p>
+                    <button class="whatsapp-btn" onclick="contactWhatsApp(1, event)">Solicitar por WhatsApp</button>
+                </div>
+
+                <!-- EcoFlow Delta 2 -->
+                <div class="product-card" onclick="openProductDetails(2)">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617547696485-467be63903b3?w=300&h=300&fit=crop" alt="EcoFlow Delta 2">
+                    </div>
+                    <h3>EcoFlow Delta 2</h3>
+                    <p class="product-price">$1,099</p>
+                    <button class="whatsapp-btn" onclick="contactWhatsApp(2, event)">Solicitar por WhatsApp</button>
+                </div>
+
+                <!-- Panel Solar Portátil 110W -->
+                <div class="product-card" onclick="openProductDetails(3)">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e938d440220?w=300&h=300&fit=crop" alt="Panel Solar 110W">
+                    </div>
+                    <h3>Panel Solar Portátil 110W</h3>
+                    <p class="product-price">$299</p>
+                    <button class="whatsapp-btn" onclick="contactWhatsApp(3, event)">Solicitar por WhatsApp</button>
+                </div>
+
+                <!-- Panel Solar 160W -->
+                <div class="product-card" onclick="openProductDetails(4)">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop" alt="Panel Solar 160W">
+                    </div>
+                    <h3>Panel Solar 160W</h3>
+                    <p class="product-price">$449</p>
+                    <button class="whatsapp-btn" onclick="contactWhatsApp(4, event)">Solicitar por WhatsApp</button>
+                </div>
+
+                <!-- Batería Portátil 100Ah -->
+                <div class="product-card" onclick="openProductDetails(5)">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1644506781334-ab79f5c0891c?w=300&h=300&fit=crop" alt="Batería 100Ah">
+                    </div>
+                    <h3>Batería Portátil 100Ah LiFePO4</h3>
+                    <p class="product-price">$799</p>
+                    <button class="whatsapp-btn" onclick="contactWhatsApp(5, event)">Solicitar por WhatsApp</button>
+                </div>
+
+                <!-- Bicicleta Eléctrica Bicipower 48V 45Ah -->
+                <div class="product-card" onclick="openProductDetails(6)">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=300&h=300&fit=crop" alt="Bicicleta Eléctrica">
+                    </div>
+                    <h3>Bicipower Evolution 48V 45Ah</h3>
+                    <p class="product-price">$1,299</p>
+                    <button class="whatsapp-btn" onclick="contactWhatsApp(6, event)">Solicitar por WhatsApp</button>
+                </div>
+
+                <!-- Triciclo Eléctrico 75V 58Ah -->
+                <div class="product-card" onclick="openProductDetails(7)">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop" alt="Triciclo Eléctrico">
+                    </div>
+                    <h3>Triciclo Eléctrico 75V 58Ah</h3>
+                    <p class="product-price">$1,899</p>
+                    <button class="whatsapp-btn" onclick="contactWhatsApp(7, event)">Solicitar por WhatsApp</button>
+                </div>
+
+                <!-- Inversor 3000W -->
+                <div class="product-card" onclick="openProductDetails(8)">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1621905251638-48416bd8575a?w=300&h=300&fit=crop" alt="Inversor 3000W">
+                    </div>
+                    <h3>Inversor Solar 3000W</h3>
+                    <p class="product-price">$699</p>
+                    <button class="whatsapp-btn" onclick="contactWhatsApp(8, event)">Solicitar por WhatsApp</button>
+                </div>
+
+                <!-- Regulador MPPT 100A -->
+                <div class="product-card" onclick="openProductDetails(9)">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=300&h=300&fit=crop" alt="Regulador MPPT">
+                    </div>
+                    <h3>Regulador MPPT 100A</h3>
+                    <p class="product-price">$349</p>
+                    <button class="whatsapp-btn" onclick="contactWhatsApp(9, event)">Solicitar por WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MODAL DETALLES DE PRODUCTO ==================== -->
+    <div class="modal" id="productModal">
+        <div class="modal-content product-details-modal">
+            <span class="close" onclick="closeProductDetails()">&times;</span>
+            <div class="product-details-content">
+                <div class="product-detail-image">
+                    <img id="detailImage" src="" alt="Producto">
+                </div>
+                <div class="product-detail-info">
+                    <h2 id="detailName"></h2>
+                    <p id="detailDescription"></p>
+                    <div class="specifications">
+                        <h3>Especificaciones Técnicas</h3>
+                        <ul id="detailSpecs"></ul>
+                    </div>
+                    <div class="detail-footer">
+                        <p class="detail-price" id="detailPrice"></p>
+                        <button class="cta-button" onclick="contactWhatsAppDetail()">Solicitar por WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== ENVÍOS A CUBA ==================== -->
+    <section class="shipping" id="envios">
+        <div class="container">
+            <h2>Envíos a Cuba</h2>
+            <div class="shipping-grid">
+                <div class="shipping-card">
+                    <div class="shipping-icon">🚢</div>
+                    <h3>Envío por Barco</h3>
+                    <p class="shipping-price">$1.25 por libra</p>
+                    <p class="shipping-time">Entrega: 15-20 días</p>
+                    <p class="shipping-desc">Opción económica para envíos voluminosos</p>
+                </div>
+                <div class="shipping-card">
+                    <div class="shipping-icon">✈️</div>
+                    <h3>Envío por Avión</h3>
+                    <p class="shipping-price">$2.75 por libra</p>
+                    <p class="shipping-time">Entrega: 5-7 días</p>
+                    <p class="shipping-desc">Entrega rápida y confiable</p>
+                </div>
+            </div>
+
+            <div class="process-section">
+                <h3>Proceso de Compra</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Selecciona el Producto</h4>
+                        <p>Elige el producto que necesitas de nuestro catálogo</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Calculamos Peso y Costo</h4>
+                        <p>Te enviamos el costo total incluido envío</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Realiza el Pago</h4>
+                        <p>Paga de forma segura con tu tarjeta o transferencia</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Envío a Cuba</h4>
+                        <p>Recibe tu producto directamente en Cuba</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== POR QUÉ ELEGIRNOS ==================== -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Por Qué Elegirnos</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Envíos Confiables</h3>
+                    <p>Entregamos a toda Cuba con total seguridad y seguimiento en tiempo real</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Productos Originales</h3>
+                    <p>Solo vendemos productos EcoFlow y componentes certificados</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Soporte directo por WhatsApp disponible 24/7</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Precios Competitivos</h3>
+                    <p>Los mejores precios del mercado sin sacrificar calidad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MODAL DE PAGO ==================== -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content payment-modal">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h2>Sistema de Pago Seguro</h2>
+            <form class="payment-form" onsubmit="processPayment(event)">
+                <div class="form-group">
+                    <label for="cardName">Nombre Completo</label>
+                    <input type="text" id="cardName" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardEmail">Correo Electrónico</label>
+                    <input type="email" id="cardEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Número de Tarjeta</label>
+                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardExpiry">Vencimiento</label>
+                        <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardCVV">CVV</label>
+                        <input type="text" id="cardCVV" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cardAmount">Monto (USD)</label>
+                    <input type="number" id="cardAmount" min="0" step="0.01" required>
+                </div>
+                <button type="submit" class="cta-button full-width">Procesar Pago</button>
+                <p class="payment-note">Tu información está completamente segura</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CubaFried's Envíos</h4>
+                    <p>Tu distribuidor confiable de energía portátil y paneles solares</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><a href="https://wa.me/16134900811" target="_blank">📱 WhatsApp: +1 (613) 490-0811</a></p>
+                    <p><a href="mailto:cubafriendsenvios@gmail.com">📧 Email: cubafriendsenvios@gmail.com</a></p>
+                    <p><a href="https://www.facebook.com/profile.php?id=61570710869662" target="_blank">📘 Facebook: CubaFried's Envíos</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p><a href="#terminos">Términos y Condiciones</a></p>
+                    <p><a href="#privacidad">Política de Privacidad</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CubaFried's Envíos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
